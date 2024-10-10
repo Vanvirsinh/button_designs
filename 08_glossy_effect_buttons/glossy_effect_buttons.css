@@ -1,0 +1,226 @@
+body {
+  background-color: #2e2e2e;
+  font-family: sans-serif
+}
+h2{
+  color: white;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 100px 0;
+}
+
+
+/* First btn */
+.glossy-first-btn {
+  border-radius: 8px;
+  position: relative;
+  border: 1px solid #fff;
+  background: #f6a020;
+  box-shadow: 0 2px 0 #00000080;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  gap: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-size: 15px;
+}
+
+.glossy-first-btn:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 0 #00000080;
+}
+
+.glossy-first-btn::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient( 120deg,#ffffff00 30%,#ffffffcc,#ffffff00 70%);
+  top: 0;
+  left: -100px;
+  opacity: 0.5;
+}
+
+.glossy-first-btn:hover::before {
+  animation: glossy 0.9s ease-out infinite;
+}
+
+@keyframes glossy {
+  0% {
+    left: -100px;
+  }
+  60%, 100% {
+    left: 100%;
+  }
+}
+
+
+/* Second btn */
+.glossy-second-btn {
+  width: fit-content;
+  display: flex;
+  padding: 20px 30px;
+  gap: 6px;
+  border: none;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  text-shadow: 3px 3px 3px #88008880;
+  background: linear-gradient(15deg, #ff6a00, #ee0979, #ff6a00, #ee0979, #ff6a00);
+  background-size: 290%;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+.glossy-second-btn:hover {
+  background-size: 400%;
+  background-position: right center;
+}
+
+.glossy-second-btn:hover svg {
+  fill: #fff;
+}
+
+.glossy-second-btn svg {
+  width: 23px;
+  fill: #fcaf4c;
+  transition: 0.3s ease;
+}
+
+
+/* Third btn */
+.glossy-third-btn {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 500;
+  padding: 2px;
+  border-radius: 8px;
+  color: #fff;  
+  position: relative;
+  border: #f0f8ff;
+  transition: 0.5s;
+  box-shadow: 5px 5px 20px #1b1b1b4d;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(350deg, #ffffff 0%, #ffffff4d 50%, #ffffff 100%);
+}
+
+.glossy-third-btn-span {
+  display: block;
+  padding: 12px 48px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #37474f 0%, #546e7a 30%, #78909c 70%, #37474f 100%);
+}
+
+.glossy-third-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background: #ffffff80;
+  transform: skew(50deg) translateX(310px);
+  transition: 0.7s;
+}
+
+.glossy-third-btn:hover {
+  transform: translateY(-3px);
+}
+
+.glossy-third-btn:hover:after {
+  transform: skew(50deg) translateX(-100px);
+} 
+
+
+/* Fourth btn */
+.glossy-fourth-btn {
+  position: relative;
+  padding: 20px 40px;
+  border-radius: 6px;
+  border: 1px solid #00c853;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.2s ease-in, box-shadow 0.2s ease-in;
+}
+
+.glossy-fourth-btn:hover {
+  background: #249654; 
+  box-shadow: 0 0 20px 1px #00c050cc;
+}
+
+.glossy-fourth-btn:active {
+  box-shadow: none;
+}
+
+.glossy-fourth-btn::before {
+  content: '';
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  width: 0px;
+  height: 86%;
+  background: #fff;
+  opacity: 0;
+  transform: skewX(-20deg);
+  box-shadow: 0 0 50px 30px #fff;
+}
+
+.glossy-fourth-btn:hover::before {
+  animation: glossy-btn-4 0.5s 0s linear;
+}
+
+@keyframes glossy-btn-4 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+  
+}
+
+
+/* Last btn */
+.glossy-last-btn {
+	font-size: 18px;
+  color: #fff;
+	font-weight: 600;
+	border: none;
+	border-radius: 10px;
+  cursor: pointer;
+	padding: 20px 40px;
+  background: linear-gradient(165deg, #7b1fa2 20%, #ce93d8 45%, #7b1fa2 80%);
+	background-size: 350%;
+	background-position: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 8px 20px rgba(0, 0, 0, 0.2);
+	transition: all 0.5s ease-in;
+}
+
+.glossy-last-btn:hover {
+	background-position: right;
+}

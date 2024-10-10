@@ -1,0 +1,2442 @@
+body {
+	background-color: #e8e8e8;
+	font-family: sans-serif;
+}
+
+h2{
+	text-align: center;
+}
+
+.container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	margin: 100px auto;
+}
+
+
+/* First btn */
+.animated-first-btn {
+	padding: 15px 45px;
+	text-align: center;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #274db8;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.4s ease-in;
+	border: 3px solid #5b87fe;
+	border-radius: 8px;
+	box-shadow: inset 0 0 0 0 #274db8;
+}
+
+.animated-first-btn:hover {
+	color: #fff;
+	box-shadow: inset 0 100px 0 0 #274db8;
+}
+
+.animated-first-btn:active {
+	transform: scale(0.95);
+}
+
+
+/* Second btn */
+.animated-second-btn {
+	position: relative;
+	overflow: hidden;
+	padding: 15px 40px;
+	font-size: 18px;
+	color: #090909;
+	background: #e8e8e8;
+	border: 2px solid #fff;
+	border-radius: 8px;
+	box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+	z-index: 1;
+}
+
+.animated-second-btn:active {
+	transform: scale(0.98);
+}
+
+.animated-second-btn:before,
+.animated-second-btn:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	width: 140%;
+	height: 180%;
+	border-radius: 50%;
+	z-index: -1;
+	transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.animated-second-btn:before {
+	background-color: rgba(0, 0, 0, 0.05);
+	transform: translateX(-50%) scaleX(1.25);
+}
+
+.animated-second-btn:after {
+	transform: translateX(-50%) scaleX(1.45);
+}
+
+.animated-second-btn:hover {
+	color: #ffffff;
+	border: 2px solid #fff;
+}
+
+.animated-second-btn:hover:before {
+	top: -35%;
+	background-color: #E94E77;
+	transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+/* Third btn */
+.animated-third-btn {
+	padding: 15px 55px;
+	position: relative;
+	background-color: transparent;
+	cursor: pointer;
+	border: 2px solid #398629;
+	overflow: hidden;
+	border-radius: 8px;
+	font-size: 18px;
+	color: #171717;
+	transition: all 0.5s ease-in-out;
+}
+
+.animated-third-btn-text {
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.animated-third-btn::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: all 0.4s ease-in-out;
+	background-color: #398629;
+	border-radius: 25px;
+	visibility: hidden;
+	height: 5px;
+	width: 5px;
+	z-index: -1;
+}
+
+.animated-third-btn:hover {
+	box-shadow: 1px 2px 10px #587653;
+	color: #fff;
+	border: 2px solid white;
+}
+
+.animated-third-btn:hover::after {
+	visibility: visible;
+	transform: scale(90) translateX(1px);
+}
+
+
+/* Fourth btn */
+.animated-fourth-btn {
+	padding: 18px 25px;
+	position: relative;
+	overflow: hidden;
+	border: 0;
+	cursor: pointer;
+	border-radius: 8px;
+	box-shadow: 1px 2px 5px #2b2b2b;
+}
+
+.animated-fourth-btn:hover .wave-animated-fourth-btn {
+	top: -100px;
+}
+
+.animated-fourth-btn:active .wave-animated-fourth-btn {
+	top: -120px;
+}
+
+.animated-fourth-btn-text {
+	position: relative;
+	z-index: 1;
+	color: #f2f2f2;
+	font-size: 18px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+.wave-animated-fourth-btn {
+	width: 210px;
+	height: 210px;
+	background-color: #27a9ff;
+	box-shadow: inset 0 0 50px #00000080;
+	position: absolute;
+	left: 0;
+	top: -60px;
+	transition: 0.3s;
+}
+
+.wave-animated-fourth-btn::before,
+a .wave-animated-fourth-btn::after {
+	width: 200%;
+	height: 200%;
+	content: "";
+	position: absolute;
+}
+
+.wave-animated-fourth-btn::after {
+	background-color: #14141480;
+	animation: wave 10#14141480;
+}
+
+.wave-animated-fourth-btn::before {
+	border-radius: 42%;
+	background-color: #0581b3;
+	animation: wave 5s linear infinite;
+}
+
+@keyframes wave {
+	0% {
+		transform: translate(-50%, -75%) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(-50%, -75%) rotate(300deg);
+	}
+}
+
+
+/* Last btn */
+.animated-last-btn {
+	border-radius: 8px;
+	font-size: 18px;
+	padding: 20px 30px;
+	position: relative;
+	border: none;
+	background-color: #000;
+	overflow: hidden;
+	color: white;
+	cursor: pointer;
+	box-shadow: 1px 2px 4px #333337d9;
+}
+
+.animated-last-btn>span {
+	position: relative;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.animated-last-btn-span {
+	position: absolute;
+	inset: 0;
+	display: grid;
+	grid-template-columns: repeat(36, 6px);
+}
+
+.animated-last-btn-span>span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.animated-last-btn-span>span::after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	background-color: #565656;
+	transition: all 0.5s ease-out, opacity 1s;
+	width: 305px;
+	height: 305px;
+	opacity: 0;
+	border-radius: 100%;
+}
+
+.animated-last-btn-span>span:active::after {
+	transition: 0s;
+	width: 0;
+	height: 0;
+	opacity: 1;
+}
+
+.animated-last-btn-hover {
+	pointer-events: none;
+	position: absolute;
+	background-color: #353535cf;
+	transition: width 0.5s ease-out, height 0.5s ease-out, top 99s linear, left 99s linear;
+	transform: translate(-50%, -50%);
+	top: 0px;
+	left: 0px;
+	width: 0px;
+	height: 0px;
+	border-radius: 100%;
+}
+
+.animated-last-btn-span>span:hover~.animated-last-btn-hover {
+	transition: all 0.5s ease-out, top 0s linear, left 0s linear;
+	width: 305px;
+	height: 305px;
+}
+
+.animated-last-btn-span>span:nth-child(1):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 3px;
+}
+
+.animated-last-btn-span>span:nth-child(37):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(73):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(109):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(145):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(181):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(217):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(253):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(289):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(325):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(361):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(397):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 3px
+}
+
+.animated-last-btn-span>span:nth-child(2):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(38):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(74):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(110):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(146):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(182):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(218):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(254):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(290):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(326):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(362):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(398):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 7px;
+}
+
+.animated-last-btn-span>span:nth-child(3):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(39):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(75):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(111):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(147):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(183):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(219):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(255):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(291):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(327):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(363):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(399):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 11px;
+}
+
+.animated-last-btn-span>span:nth-child(4):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(40):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(76):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(112):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(148):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(184):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(220):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(256):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(292):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(328):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(364):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(400):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 15px;
+}
+
+.animated-last-btn-span>span:nth-child(5):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(41):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(77):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(113):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(149):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(185):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(221):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(257):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(293):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(329):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(365):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(401):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 19px;
+}
+
+.animated-last-btn-span>span:nth-child(6):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(42):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(78):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(114):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(150):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(186):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(222):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(258):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(294):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(330):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(366):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(402):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 23px;
+}
+
+.animated-last-btn-span>span:nth-child(7):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(43):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(79):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(115):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(151):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(187):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(223):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(259):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(295):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(331):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(367):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(403):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 27px;
+}
+
+.animated-last-btn-span>span:nth-child(8):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(44):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(80):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(116):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(152):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(188):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(224):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(260):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(296):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(332):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(368):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(404):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 31px;
+}
+
+.animated-last-btn-span>span:nth-child(9):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(45):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(81):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(117):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(153):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(189):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(225):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(261):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(297):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(333):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(369):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(405):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 35px;
+}
+
+.animated-last-btn-span>span:nth-child(10):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(46):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(82):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(118):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(154):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(190):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(226):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(262):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(298):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(334):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(370):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(406):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 39px;
+}
+
+.animated-last-btn-span>span:nth-child(11):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(47):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(83):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(119):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(155):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(191):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(227):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(263):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(299):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(335):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(371):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(407):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 43px;
+}
+
+.animated-last-btn-span>span:nth-child(12):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(48):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(84):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(120):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(156):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(192):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(228):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(264):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(300):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(336):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(372):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(408):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 47px;
+}
+
+.animated-last-btn-span>span:nth-child(13):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(49):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(85):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(121):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(157):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(193):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(229):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(265):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(301):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(337):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(373):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(409):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 51px;
+}
+
+.animated-last-btn-span>span:nth-child(14):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(50):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(86):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(122):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(158):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(194):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(230):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(266):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(302):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(338):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(374):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(410):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 55px;
+}
+
+.animated-last-btn-span>span:nth-child(15):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(51):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(87):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(123):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(159):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(195):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(231):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(267):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(303):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(339):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(375):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(411):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 59px;
+}
+
+.animated-last-btn-span>span:nth-child(16):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(52):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(88):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(124):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(160):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(196):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(232):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(268):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(304):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(340):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(376):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(412):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 63px;
+}
+
+.animated-last-btn-span>span:nth-child(17):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(53):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(89):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(125):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(161):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(197):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(233):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(269):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(305):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(341):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(377):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(413):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 67px;
+}
+
+.animated-last-btn-span>span:nth-child(18):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(54):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(90):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(126):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(162):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(198):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(234):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(270):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(306):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(342):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(378):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(414):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 71px;
+}
+
+.animated-last-btn-span>span:nth-child(19):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(55):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(91):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(127):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(163):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(199):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(235):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(271):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(307):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(343):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(379):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(415):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 75px;
+}
+
+.animated-last-btn-span>span:nth-child(20):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(56):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(92):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(128):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(164):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(200):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(236):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(272):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(308):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(344):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(380):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(416):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 79px;
+}
+
+.animated-last-btn-span>span:nth-child(21):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(57):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(93):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(129):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(165):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(201):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(237):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(273):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(309):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(345):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(381):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(417):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 83px;
+}
+
+.animated-last-btn-span>span:nth-child(22):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(58):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(94):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(130):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(166):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(202):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(238):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(274):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(310):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(346):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(382):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(418):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 87px;
+}
+
+.animated-last-btn-span>span:nth-child(23):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(59):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(95):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(131):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(167):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(203):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(239):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(275):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(311):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(347):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(383):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(419):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 91px;
+}
+
+.animated-last-btn-span>span:nth-child(24):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(60):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(96):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(132):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(168):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(204):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(240):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(276):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(312):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(348):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(384):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(420):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 95px;
+}
+
+.animated-last-btn-span>span:nth-child(25):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(61):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(97):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(133):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(169):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(205):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(241):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(277):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(313):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(349):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(385):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(421):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 99px;
+}
+
+.animated-last-btn-span>span:nth-child(26):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(62):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(98):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(134):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(170):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(206):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(242):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(278):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(314):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(350):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(386):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(422):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 103px;
+}
+
+.animated-last-btn-span>span:nth-child(27):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(63):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(99):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(135):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(171):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(207):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(243):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(279):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(315):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(351):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(387):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(423):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 107px;
+}
+
+.animated-last-btn-span>span:nth-child(28):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(64):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(100):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(136):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(172):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(208):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(244):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(280):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(316):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(352):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(388):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(424):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 111px;
+}
+
+.animated-last-btn-span>span:nth-child(29):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(65):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(101):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(137):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(173):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(209):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(245):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(281):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(317):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(353):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(389):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(425):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 115px;
+}
+
+.animated-last-btn-span>span:nth-child(30):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(66):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(102):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(138):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(174):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(210):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(246):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(282):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(318):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(354):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(390):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(426):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 119px;
+}
+
+.animated-last-btn-span>span:nth-child(31):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(67):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(103):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(139):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(175):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(211):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(247):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(283):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(319):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(355):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(391):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(427):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 123px;
+}
+
+.animated-last-btn-span>span:nth-child(32):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(68):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(104):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(140):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(176):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(212):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(248):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(284):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(320):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(356):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(392):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(428):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 127px;
+}
+
+.animated-last-btn-span>span:nth-child(33):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(69):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(105):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(141):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(177):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(213):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(249):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(285):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(321):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(357):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(393):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(429):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 131px;
+}
+
+.animated-last-btn-span>span:nth-child(34):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(70):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(106):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(142):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(178):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(214):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(250):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(286):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(322):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(358):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(394):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(430):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 135px;
+}
+
+.animated-last-btn-span>span:nth-child(35):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(71):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(107):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(143):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(179):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(215):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(251):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(287):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(323):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(359):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(395):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(431):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 139px;
+}
+
+.animated-last-btn-span>span:nth-child(36):hover~.animated-last-btn-hover {
+	top: 2px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(72):hover~.animated-last-btn-hover {
+	top: 6px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(108):hover~.animated-last-btn-hover {
+	top: 10px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(144):hover~.animated-last-btn-hover {
+	top: 14px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(180):hover~.animated-last-btn-hover {
+	top: 18px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(216):hover~.animated-last-btn-hover {
+	top: 22px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(252):hover~.animated-last-btn-hover {
+	top: 26px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(288):hover~.animated-last-btn-hover {
+	top: 30px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(324):hover~.animated-last-btn-hover {
+	top: 34px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(360):hover~.animated-last-btn-hover {
+	top: 38px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(396):hover~.animated-last-btn-hover {
+	top: 42px;
+	left: 143px;
+}
+
+.animated-last-btn-span>span:nth-child(432):hover~.animated-last-btn-hover {
+	top: 46px;
+	left: 143px;
+}

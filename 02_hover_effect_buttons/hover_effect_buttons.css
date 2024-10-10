@@ -1,0 +1,113 @@
+body {
+  background-color: #f2f2f2;
+  font-family: sans-serif;
+}
+
+h2{
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px; 
+  margin: 100px auto;
+}
+
+.button, .btn {
+  padding: 10px 20px; 
+  border: none; 
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: 0.2s all ease;
+  font-size: 16px; 
+}
+
+
+/* First btn */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative; 
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #666;
+}
+
+.btn-white::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+
+/* Second btn */
+.btn-2 {
+  background-color: #007bff; 
+}
+.btn-2:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); 
+}
+
+
+/* Third btn */
+.btn-3 {
+  background-color: #dc3545; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+
+}
+.btn-3:hover {
+  background-color: #c82333;
+  transform: scale(1.05); 
+  box-shadow: -20px 50px 50px rgba(0,0,0,0.2);
+}
+
+
+/* Fourth btn */
+.btn-4 {
+  background-color: #28a745; 
+}
+.btn-4:hover {
+  background-color: #218838;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3); 
+  transform: translateY(3px); 
+}
+
+
+/* Last btn */
+.btn-5 {
+  padding: 0 40px;
+  background-color: #ffc107; 
+  border-radius: 100px; 
+}
+.btn-5:hover {
+  background-color: #e0a800;
+  transform: rotate(5deg); 
+}
+
+

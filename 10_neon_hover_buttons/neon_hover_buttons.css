@@ -1,0 +1,295 @@
+body {
+  background-color: #000;
+  font-family: sans-serif;
+}
+
+h2{
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 100px auto;
+}
+
+
+/* First btn */
+.mirror-effect-first-btn {
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 2px solid #FF69B4;
+  padding: 20px 35px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #f2f2f2;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, #0000002c);
+  transition: 0.4s;
+  transition-delay: 0.1s;
+}
+
+.mirror-effect-first-btn:hover {
+  transition-delay: 0.5s;
+  color: #000;
+  box-shadow: 0 0 10px #FF69B4, 0 0 20px #FF69B4, 0 0 40px #FF69B4, 0 0 80px #FF69B4, 0 0 100px #FF69B4;
+}
+
+.mirror-effect-first-btn .mirror-effect-first-span {
+  position: relative;
+  z-index: 1;
+}
+
+.mirror-effect-first-btn::before,
+.mirror-effect-first-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 2px;
+  background: #FF69B4;
+  transition: width 0.5s, right 0.5s, height 0.5s, box-shadow 0.5s;
+}
+
+.mirror-effect-first-btn::before {
+  left: -15px;
+  box-shadow: 5px -8px 0 #FF69B4, 5px 8px 0 #FF69B4;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.mirror-effect-first-btn::after {
+  right: -15px;
+  box-shadow: -5px -8px 0 #FF69B4, -5px 8px 0 #FF69B4;
+  transition-delay: 0.5s, 0.5s, 0s, 0s;
+}
+
+.mirror-effect-first-btn:hover::before {
+  left: -2px;
+  box-shadow: 5px 0 0 #FF69B4, 5px 0 0 #FF69B4;
+}
+
+.mirror-effect-first-btn:hover::after {
+  right: -2px;
+  box-shadow: -5px 0 0 #FF69B4, -5px 0 0 #FF69B4;
+}
+
+.mirror-effect-first-btn:hover::before,
+.mirror-effect-first-btn:hover::after {
+  width: 60%;
+  height: 100%;
+  transition-delay: 0s, 0s, 0.5s, 0.5s;
+}
+
+
+/* Second btn */
+.mirror-effect-second-span {
+  position: relative;
+  background: #121212;
+  color: #f2f2f2;
+  border: 2px solid #9fd6ec;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+  -webkit-box-reflect: below 5px linear-gradient(transparent, #0000002c);
+  transition: box-shadow 0.3s ease;
+}
+
+.mirror-effect-second-span:hover {
+  box-shadow: 0 0 15px #9fd6ec, 0 0 30px #9fd6ec, 0 0 45px #9fd6ec;
+}
+
+
+/* Third btn */
+.mirror-effect-third-span {
+  font-size: 20px;
+  padding: 16px 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #0e0e1a;
+  color: #f2f2f2;
+  font-weight: bold;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.mirror-effect-third-span:hover {
+  background: #021d4e;
+  background: linear-gradient(270deg, #00008bb3 0%, #87cefacc 60%);
+  color: #040426;
+}
+
+.mirror-effect-third-span:active {
+  scale: 0.98;
+}
+
+
+/* Fourth btn */
+.mirror-effect-fourth-btn {
+  position: relative;
+  display: inline-block;
+  padding: 25px 40px;
+  cursor: pointer;
+  color: #b0c038;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  overflow: hidden;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.mirror-effect-fourth-btn:hover {
+  background-color: #b0c038;
+  color: #050801;
+  border: 2px solid #ddf23b;
+  box-shadow: 0 0 5px #b0c038, 0 0 25px #b0c038, 0 0 50px #b0c038, 0 0 200px #b0c038;
+}
+
+.mirror-effect-fourth-btn .fourth-btn-span {
+  position: absolute;
+  display: block;
+}
+
+.mirror-effect-fourth-btn .fourth-btn-span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #b0c038);
+  animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+.mirror-effect-fourth-btn .fourth-btn-span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #b0c038);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%, 100% {
+    top: 100%;
+  }
+}
+
+.mirror-effect-fourth-btn .fourth-btn-span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #b0c038);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%, 100% {
+    right: 100%;
+  }
+}
+
+.mirror-effect-fourth-btn .fourth-btn-span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #b0c038);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%, 100% {
+    bottom: 100%;
+  }
+}
+
+
+/* Last btn */
+.mirror-effect-last-btn {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 20px 45px;
+  color: #f2f2f2;
+  border: 3px solid #309e55;
+  background: none;
+  transition: color 0.15s linear, border 0.15s linear;
+}
+
+.mirror-effect-last-btn::before,
+.mirror-effect-last-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 0.15s linear;
+}
+
+.mirror-effect-last-btn::before {
+  top: 100%;
+  left: 50px;
+  width: 40%;
+  height: 80%;
+  background: #1ce763;
+  transform: perspective(3.5px) rotateX(10deg) scale(1.5, 0.4);
+  filter: blur(8px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.mirror-effect-last-btn::after {
+  background: #1ce763;
+  box-shadow: 0 2px 35px rgba(34, 130, 69, 0.79);
+  z-index: -1;
+  opacity: 0;
+}
+
+.mirror-effect-last-btn:hover::before {
+  opacity: 0.6;
+}
+
+.mirror-effect-last-btn:hover::after {
+  opacity: 1;
+}
+
+.mirror-effect-last-btn:hover, 
+.mirror-effect-last-btn:focus {
+  color: #181818;
+  border-color: #309e55;
+}

@@ -1,0 +1,325 @@
+body{
+  background-color: #0b0b0b;
+  font-family: sans-serif;
+}
+h2{
+  text-align: center;
+  color: #fff;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 100px 0;
+
+}
+
+
+/* First */
+.border-animation-first-btn {
+  position: relative;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  overflow: hidden;
+  background: rgba(142, 251, 255, 0.219);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.border-animation-first-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(246, 248, 223, 0.215);
+}
+.border-animation-first-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffffff66, transparent );
+  transition: 0.4s;
+  transition-delay: 0.4s;
+}
+.border-animation-first-btn:hover:after {
+  left: 100%;
+}
+.border-animation-first-btn span {
+  position: absolute;
+  transition: 0.5s ease;
+}
+.border-animation-first-btn span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+.border-animation-first-btn:hover span:nth-child(1) {
+  width: 100%;
+  transform: translateX(100%);
+}
+.border-animation-first-btn span:nth-child(2) {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+  background: #fff;
+}
+.border-animation-first-btn:hover span:nth-child(2) {
+  height: 100%;
+  transform: translateY(100%);
+}
+.border-animation-first-btn span:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+.border-animation-first-btn:hover span:nth-child(3) {
+  width: 100%;
+  transform: translateX(-100%);
+}
+.border-animation-first-btn span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 0;
+  background: #fff;
+}
+.border-animation-first-btn:hover span:nth-child(4) {
+  height: 100%;
+  transform: translateY(-100%);
+}
+
+
+/* Second */
+.border-animation-second-btn {
+  display: block;
+  cursor: pointer;
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  width: 160px;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.border-animation-second-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  background: linear-gradient(115deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+  background-size: 25% 100%;
+  animation: border-translate .75s linear infinite;
+  animation-play-state: paused;
+  translate: -5% 0%;
+  transition: translate 0.3s ease-out;
+}
+
+.border-animation-second-btn:hover::before {
+  animation-play-state: running;
+  transition-duration: 0.65s;
+  translate: 0% 0%;
+}
+
+@keyframes border-translate {
+  to {
+    transform: translateX(-25%);
+  }
+}
+
+.border-animation-second-btn span {
+  position: relative;
+  display: block;
+  padding: 16px 24px;
+  font-size: 18px;
+  background: #000;
+  border-radius: 3px;
+  height: 100%;
+}
+
+
+/* Third */
+.border-animation-third-btn {
+  border-radius: 8px;
+  width: 165px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  border: none;
+  font-size: 15px;
+  color: #ebebeb;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  transition-duration: .2s ;
+  background-color: #0f0f0f;
+}
+
+.border-animation-third-btn:before,
+.border-animation-third-btn:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #141414, #1b1b1b, #2e2e2e, #e1e1e1, #2e2e2e, #1b1b1b, #141414, #141414);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.border-animation-third-btn:after {
+  filter: blur(45px);
+}
+
+
+/* Fourth btn */
+.btn-box {
+  width: 150px;
+  height: 50px;
+  position: relative;
+}
+
+.border-animation-fourth-btn {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #fe8da8;
+  outline: none;
+  transition: 0.8s ease-in-out;
+}
+
+.svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.border-animation-fourth-btn:hover {
+  transition: 1s ease-in-out;
+  background: #fa597e;
+}
+
+.border-animation-fourth-btn:hover .svg {
+  stroke-dashoffset: -480;
+}
+
+.border-animation-fourth-btn span {
+  color: #fff;
+  font-size: 15px;
+}
+
+
+/* Last btn */
+.border-animation-last-btn {
+  padding: 20px 60px;
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  font-size: 18px;
+  position: relative;
+}
+
+.border-animation-last-btn .last-btn-span {
+  color: #a5a5a5;
+  position: relative;
+  transition-delay: 500ms;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.border-animation-last-btn .corner {
+  transition: 500ms;
+  position: absolute;
+  background-color: red;
+  box-shadow: 0 0 15px red, 0 0 30px red, 0 0 50px red;
+}
+
+.border-animation-last-btn .top {
+  width: 15px;
+  height: 2px;
+  top: 0;
+  left: 0;
+}
+
+.border-animation-last-btn .left {
+  width: 2px;
+  height: 15px;
+  top: 0;
+  left: 0;
+}
+
+.border-animation-last-btn .bottom {
+  width: 15px;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+}
+
+.border-animation-last-btn .right {
+  width: 2px;
+  height: 15px;
+  bottom: 0;
+  right: 0;
+}
+
+.border-animation-last-btn:hover {
+  color: #a5a5a5;
+}
+
+.border-animation-last-btn:hover .fouth-btn-span {
+  color: #a5a5a5;
+}
+
+.border-animation-last-btn:hover .top, 
+.border-animation-last-btn:hover .bottom {
+  width: 100%;
+}
+
+.border-animation-last-btn:hover .left,
+.border-animation-last-btn:hover .right {
+  height: 100%;
+}

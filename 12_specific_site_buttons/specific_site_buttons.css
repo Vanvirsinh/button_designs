@@ -1,0 +1,281 @@
+body {
+  background-color: #191919;
+  font-family: sans-serif;
+}
+
+h2{
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 100px auto;
+}
+
+
+/* First btn */
+.custom-readmore-btn {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #3aa43a;
+  border: none;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 0px 15px;
+  gap: 0px;
+  transition: all 0.4s;
+}
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  width: 45px;
+}
+.icon-wrapper .icon-page {
+  width: 50%;
+  position: absolute;
+}
+.custom-readmore-btn:hover .icon-page {
+  animation: paging 0.5s linear infinite;
+  transform-origin: left;
+}
+.custom-readmore-btn:hover {
+  background-color: #318c31;
+  box-shadow: none;
+}
+@keyframes paging {
+  0% {
+    transform: rotateY(0deg) skewY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg) skewY(-20deg);
+  }
+  100% {
+    transform: rotateY(180deg) skewY(0deg);
+  }
+}
+.readmore-btn-span {
+  width: 100px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+
+/* Second btn */
+.fold-btn {
+  position: relative;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 17px 35px;
+  cursor: pointer;
+  background-color: #2820ba;
+  border: none;
+  border-radius: 8px;
+  color: #e4e4e4;
+}
+
+.fold-btn::before {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #212121 0%, #212121 50%, #beb160 50%, #beb160 60%);
+  border-radius: 0 0 8px 0;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.fold-btn:hover::before {
+  width: 28px;
+  height: 28px;
+}
+
+.fold-btn:active {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  transform: translate(1px, 1px);
+}
+
+
+/* Third btn */
+.space-btn-container {
+  width: 110px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  transform: translate(10%, -10%);
+  transition: 0.4s;
+}
+
+.space-btn {
+  background-color: #427dc2;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 13px 50px;
+  width: 50px;
+  font-size: 19px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #2c5364;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.space-btn-container:hover {
+  box-shadow: #417a92d2 0px 0px 60px;
+}
+
+.space-btn:hover {
+  border: 2px solid #2c5364;
+  background-color: transparent;
+}
+
+.space-btn-container:hover>.svg-first {
+  transform: translate(350%, 90%);
+}
+
+.space-btn-container:hover>.svg-second {
+  transform: translate(-120%, -180%) rotate(20deg);
+}
+
+.space-btn-container:hover>.svg-third {
+  transform: translate(150%, -160%) rotate(45deg);
+}
+
+.space-btn-container:hover>.svg-fourth {
+  transform: translate(-280%, 10%);
+}
+
+.space-btn-container:hover>.svg-fifth {
+  transform: translate(-6%, 80%) rotate(-65deg);
+}
+
+.space-btn:active {
+  transform: scale(1.02);
+}
+
+
+/* Fourth btn */
+.add-to-cart-main-btn {
+  position: relative;
+  margin: 0 0 0 65px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 8px;
+  border: none;
+  box-shadow: #4d1e0d45 0px 6px 12px -2px;
+}
+
+.add-to-cart-btn {
+  background-color: #ff4c10 ;
+}
+
+.add-to-cart-btn,
+.price-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 42px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.price-btn {
+  position: absolute;
+  inset: 0;
+  font-size: 18px;
+  background-color: #1a237e;
+  transform: translate(0%, 100%);
+}
+
+.add-to-cart-btn .add-to-cart-text {
+  color: #fff;
+}
+
+.price-btn .add-to-cart-price {
+  color: #fff;
+}
+
+.add-to-cart-main-btn:hover .add-to-cart-btn {
+  transform: translate(0%, -20%);
+}
+
+.add-to-cart-main-btn:hover .price-btn {
+  transform: translate(0%, 0%);
+}
+
+
+/* Last btn */
+.airplane-main-btn {
+  width: 190px;
+  height: 50px;
+  margin: 0 0 0 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  background: #1f85ad;
+  color: #f2f2f2;
+}
+
+.airplane-main-btn:hover {
+  box-shadow: 0 0 20px 0px #2e2e2e3a;
+}
+
+.airplane-main-btn .airplane-icon {
+  position: absolute;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.airplane-main-btn .airplane-btn-text {
+  transform: translateX(55px);
+}
+
+.airplane-main-btn:hover .airplane-icon {
+  width: 177px;
+}
+
+.airplane-main-btn:hover .airplane-btn-text {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.airplane-icon{
+  fill: #f2f2f2;
+}
+
+.airplane-main-btn:active .airplane-icon {
+  transform: scale(0.85);
+  transform: translateY(-60px);
+  fill: #191919;
+}

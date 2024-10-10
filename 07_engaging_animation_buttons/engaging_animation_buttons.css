@@ -1,0 +1,614 @@
+body {
+  background-color: #0b0b0b;
+  font-family: sans-serif;
+}
+
+h2{
+  color: #f2f2f2;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 100px 0;
+}
+
+
+/* First btn */
+.heart-first-btn {
+  background: #f52357;
+  position: relative;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border: 2px solid #f2f2f2;
+  border-radius: 8px;
+  transition: all .3s ease-in-out;
+}
+
+.heart-1,
+.heart-2,
+.heart-3,
+.heart-4,
+.heart-5,
+.heart-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fd1853);
+  z-index: -1;
+}
+
+.heart-1 {
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.heart-2 {
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.heart-3 {
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.heart-4 {
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.heart-5 {
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.heart-6 {
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  transition: all .8s ease;
+}
+
+.heart-first-btn:hover {
+  background: transparent;
+  color: #b7b7b7;
+  box-shadow: 0 0 50px #fd1853;
+}
+
+.heart-first-btn:hover .heart-1,
+.heart-first-btn:hover .heart-2,
+.heart-first-btn:hover .heart-3,
+.heart-first-btn:hover .heart-4,
+.heart-first-btn:hover .heart-5,
+.heart-first-btn:hover .heart-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fd1853);
+  z-index: 2;
+}
+
+.heart-first-btn:hover .heart-1 {
+  top: -80%;
+  left: -30%;
+  width: 25px;
+}
+
+.heart-first-btn:hover .heart-2 {
+  top: -25%;
+  left: 10%;
+  width: 15px;
+}
+
+.heart-first-btn:hover .heart-3 {
+  top: 55%;
+  left: 25%;
+  width: 5px;
+}
+
+.heart-first-btn:hover .heart-4 {
+  top: 30%;
+  left: 80%;
+  width: 8px;
+}
+
+.heart-first-btn:hover .heart-5 {
+  top: 25%;
+  left: 115%;
+  width: 15px;
+}
+
+.heart-first-btn:hover .heart-6 {
+  top: 5%;
+  left: 60%;
+  width: 5px;
+}
+
+
+/* Second btn */
+.star-btn {
+  background: #22adb7;
+  position: relative;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #00e6f6;
+  border-radius: 8px;
+  transition: all .3s ease-in-out;
+}
+
+.star-1,
+.star-2,
+.star-3,
+.star-4,
+.star-5,
+.star-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -1;
+}
+
+.star-1 {
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-2 {
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-3 {
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-4 {
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-5 {
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-6 {
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  transition: all .8s ease;
+}
+
+.star-btn:hover {
+  background: transparent;
+  color: #00e6f6;
+  box-shadow: 0 0 25px #00e6f6;
+}
+
+.star-btn:hover .star-1,
+.star-btn:hover .star-2,
+.star-btn:hover .star-3,
+.star-btn:hover .star-4,
+.star-btn:hover .star-5,
+.star-btn:hover .star-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: 2;
+}
+
+.star-btn:hover .star-1 {
+  top: -80%;
+  left: -30%;
+  width: 25px;
+}
+
+.star-btn:hover .star-2 {
+  top: -25%;
+  left: 10%;
+  width: 15px;
+}
+
+.star-btn:hover .star-3 {
+  top: 55%;
+  left: 25%;
+  width: 5px;
+}
+
+.star-btn:hover .star-4 {
+  top: 30%;
+  left: 80%;
+  width: 8px;
+}
+
+.star-btn:hover .star-5 {
+  top: 25%;
+  left: 115%;
+  width: 15px;
+}
+
+.star-btn:hover .star-6 {
+  top: 5%;
+  left: 60%;
+  width: 5px;
+}
+
+.fil0 {
+  fill: #fffdef;
+}
+
+
+/* Third btn */
+.star-sec-btn {
+  position: relative;
+  padding: 18px 40px;
+  background: #b9b9b9;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.star-eff-1,
+.star-eff-2,
+.star-eff-3,
+.star-eff-4,
+.star-eff-5,
+.star-eff-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -1;
+}
+
+.star-eff-1 {
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  transition: all 0.8s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.star-eff-2 {
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-eff-3 {
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-eff-4 {
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-eff-5 {
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-eff-6 {
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.star-sec-btn:hover {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 0 0 80px #ffffff8c;
+}
+
+.star-sec-btn:hover .star-eff-1,
+.star-sec-btn:hover .star-eff-2,
+.star-sec-btn:hover .star-eff-3,
+.star-sec-btn:hover .star-eff-4,
+.star-sec-btn:hover .star-eff-5,
+.star-sec-btn:hover .star-eff-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 10px #fffdef);
+  z-index: 2;
+}
+
+.star-sec-btn:hover .star-eff-1 {
+
+  top: -20%;
+  left: -20%;
+  width: 20px;
+}
+
+.star-sec-btn:hover .star-eff-2 {
+  top: 35%;
+  left: -25%;
+  width: 15px;
+}
+
+.star-sec-btn:hover .star-eff-3 {
+  top: 80%;
+  left: -10%;
+  width: 10px;
+}
+
+.star-sec-btn:hover .star-eff-4 {
+  top: -25%;
+  left: 105%;
+  width: 20px;
+}
+
+.star-sec-btn:hover .star-eff-5 {
+  top: 30%;
+  left: 115%;
+  width: 15px;
+}
+
+.star-sec-btn:hover .star-eff-6 {
+  top: 80%;
+  left: 105%;
+  width: 10px;
+}
+
+.fil0 {
+  fill: #f2f2f2;
+}
+
+
+/* Fourth btn */
+.bubble-effect-btn {
+  position: relative;
+  padding: 20px 40px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #3CB371;
+  transition: all 0.2s ease;
+}
+
+.bubble-effect-btn:active {
+  transform: scale(0.95);
+}
+
+.bubble-effect-btn:before,
+.bubble-effect-btn:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+}
+
+.bubble-effect-btn:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #3CB371 20%, transparent 30%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #3CB371 15%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: topBubbles 0.6s ease;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%;
+  }
+}
+
+.bubble-effect-btn:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #3CB371 15%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%),
+    radial-gradient(circle, #3CB371 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: bottomBubbles 0.6s ease;
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%;
+  }
+}
+
+
+/* Last btn */
+.warning-btn {
+  background: #ffaf5a;
+  position: relative;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px solid #cb7921;
+  border-radius: 8px;
+  transition: all .3s ease-in-out;
+}
+
+.warning-icon-1,
+.warning-icon-2,
+.warning-icon-3,
+.warning-icon-4,
+.warning-icon-5,
+.warning-icon-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 0 #d48a3a);
+  z-index: -1;
+}
+
+.warning-icon-1 {
+  top: 20%;
+  left: 20%;
+  width: 25px;
+  transition: all 1s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+.warning-icon-2 {
+  top: 45%;
+  left: 45%;
+  width: 15px;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.warning-icon-3 {
+  top: 40%;
+  left: 40%;
+  width: 5px;
+  transition: all 1s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.warning-icon-4 {
+  top: 20%;
+  left: 40%;
+  width: 8px;
+  transition: all .8s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.warning-icon-5 {
+  top: 25%;
+  left: 45%;
+  width: 15px;
+  transition: all .6s cubic-bezier(0, 0.4, 0, 1.01);
+}
+
+.warning-icon-6 {
+  top: 5%;
+  left: 50%;
+  width: 5px;
+  transition: all .8s ease;
+}
+
+.warning-btn:hover {
+  background: transparent;
+  color: #b7b7b7;
+  box-shadow: 0 0 50px #d48a3a;
+
+}
+
+.warning-btn:hover .warning-icon-1,
+.warning-btn:hover .warning-icon-2,
+.warning-btn:hover .warning-icon-3,
+.warning-btn:hover .warning-icon-4,
+.warning-btn:hover .warning-icon-5,
+.warning-btn:hover .warning-icon-6 {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(0 0 10px #d48a3a);
+  z-index: 2;
+}
+
+.warning-btn:hover .warning-icon-1 {
+  top: -80%;
+  left: -30%;
+  width: 25px;
+}
+
+.warning-btn:hover .warning-icon-2 {
+  top: -25%;
+  left: 10%;
+  width: 15px;
+}
+
+.warning-btn:hover .warning-icon-3 {
+  top: 55%;
+  left: 25%;
+  width: 5px;
+}
+
+.warning-btn:hover .warning-icon-4 {
+  top: 30%;
+  left: 80%;
+  width: 8px;
+}
+
+.warning-btn:hover .warning-icon-5 {
+  top: 25%;
+  left: 115%;
+  width: 15px;
+}
+
+.warning-btn:hover .warning-icon-6 {
+  top: 5%;
+  left: 60%;
+  width: 5px;
+}
